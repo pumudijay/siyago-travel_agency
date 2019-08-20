@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@media only screen and (min-width: 991px)
+{
+	.hamburger
+	{
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: 991px)
+{
+	.main_nav
+	{
+		display: none ;
+	}
+	.hamburger
+	{
+		display: block !important;
+	}
+	.logo div:first-of-type
+	{
+		font-size: 22px;
+	}
+	.logo div:nth-child(2)
+	{
+		font-size: 9px;
+	}
+	.home_content
+	{
+		width: 100%;
+	}
+	.home_text_large
+	{
+		font-size: 125px;
+	}
+	.home_text_small
+	{
+		font-size: 42px;
+	}
+	
+}
+
+@media only screen and (max-width: 767px)
+{
+	.home_text_large
+	{
+		font-size: 88px;
+	}
+	.home_text_small
+	{
+		font-size: 36px;
+	}
+}
+
+@media only screen and (max-width: 575px)
+{
+	.home_text_large
+	{
+		font-size: 64px;
+	}
+	.home_text_small
+	{
+		font-size: 24px;
+	}	
+}

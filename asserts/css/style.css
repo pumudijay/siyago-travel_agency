@@ -1,0 +1,506 @@
+/**********
+1. Fonts
+***********/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800,900');
+
+ /*********************************
+2. Body and some general stuff
+*********************************/
+
+body {
+     font-family: 'Montserrat', sans-serif;
+     font-size: 14px;
+     font-weight: 400;
+     background: #FFFFFF;
+     color: #131a2f;
+}
+ 
+div {
+     display: block;
+     position: relative;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+ul
+{
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+h1{font-size: 48px;}
+h2{font-size: 40px;}
+h3{font-size: 24px;}
+h4{font-size: 18px;}
+h5{font-size: 14px;}
+h1, h2, h3, h4, h5, h6
+{
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+
+
+.super_container {
+     width: 100%;
+     overflow: hidden;
+}
+
+.ml-auto,
+.mx-auto {
+     margin-left: auto!important;
+}
+
+.float_left
+{
+  float: left;
+}
+/*********************************
+3. Home
+*********************************/
+
+.home
+{
+  width: 100%;
+  height: 100vh;
+}
+.home_background
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.home_content
+{
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+}
+.home_text_large
+{
+  font-size: 215px;
+  font-weight: 900;
+  color: #fdaa27;
+  opacity: 0.34;
+  text-transform: uppercase;
+  line-height: 0.75;
+}
+.home_text_small
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 72px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-shadow: 0px 11px 51px rgba(0,0,0,0.35);
+}
+ /********************
+4. Header
+*********************/
+ 
+.header {
+     display: inline-block;
+     position: fixed;
+     top: 47px;
+     width: 100%;
+     z-index: 100;
+     -webkit-transition: all 400ms ease;
+     -moz-transition: all 400ms ease;
+     -ms-transition: all 400ms ease;
+     -o-transition: all 400ms ease;
+     transition: all 400ms ease;
+}
+
+.header_container {
+     width: 100%;
+     height: 121px;
+     background: #151B54;
+     -webkit-transition: all 400ms ease;
+     -moz-transition: all 400ms ease;
+     -ms-transition: all 400ms ease;
+     -o-transition: all 400ms ease;
+     transition: all 400ms ease;
+}
+
+/*********************************
+4.1. Logo
+*********************************/
+.logo_container {
+  position: absolute;
+     -webkit-transform: translateY(8px);
+     -moz-transform: translateY(8px);
+     -ms-transform: translateY(8px);
+     -o-transform: translateY(8px);
+     transform: translateY(8px);
+ }
+.logo {
+     height: 100%;
+     padding-left: 85px;
+ }
+ 
+.logo div {
+     display: block;
+     color: #FFFFFF;
+     text-transform: uppercase;
+}
+
+.logo div:first-of-type {
+     font-size: 24px;
+     font-weight: 500;
+     line-height: 0.75;
+     padding-top: 15px;
+     padding-left: 8px;
+}
+ 
+.logo div:nth-child(2) {
+     font-size: 10px;
+     font-weight: 500;
+     color: #929292;
+     letter-spacing: 0.13em;
+     margin-top: 10px;
+     padding-left: 8px;
+}
+ 
+.logo_image {
+     position: absolute;
+     top: 10px;
+     left: 41px;
+     width: 50px;
+     height: 41px;
+     -webkit-transition: all 400ms ease;
+     -moz-transition: all 400ms ease;
+     -ms-transition: all 400ms ease;
+     -o-transition: all 400ms ease;
+     transition: all 400ms ease;
+}
+
+.header.scrolled .logo_image {
+     width: 40px;
+     top: -28px;
+     left: 46px;
+}
+ 
+.logo_image img {
+     max-width: 100%;
+}
+
+/*********************************
+4.2. Navigation
+*********************************/
+ 
+.main_nav {
+     /*height: 100%;*/
+     position: absolute;
+     padding-right: 10px;
+     right: 300px;
+}
+
+.main_nav_list {
+     height: 100%;
+     margin-top: 0;
+}
+
+.main_nav_item {
+     display: inline-block;
+     position: relative;
+     /*padding-left: 22px;
+  padding-right: 22px;*/
+     margin-right: -4px;
+     padding-top: 2px;
+
+ }
+ 
+ .main_nav_item.active::after {
+     display: block;
+     position: absolute;
+     bottom: 1px;
+     left: 0;
+     width: 100%;
+     height: 3px;
+     background: #1589FF;
+     content: '';
+ }
+ 
+ .main_nav_item a {
+     display: block;
+     text-decoration-line: none;
+     font-size: 15px;
+     font-weight: 400;
+     color: #FFFFFF;
+     line-height: 121px;
+     padding-left: 22px;
+     padding-right: 22px;
+     -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+     -ms-transition: all 200ms ease;
+     -o-transition: all 200ms ease;
+     transition: all 200ms ease;
+ }
+ 
+ .header.scrolled .main_nav_item a {
+     line-height: 90px;
+ }
+ 
+ .main_nav_item.active a {
+     color: #1589FF;
+ }
+ 
+ .main_nav_item:hover a {
+     color: #1589FF;
+ }
+
+
+
+/*********************************
+4.3. Hamburger
+*********************************/
+
+.hamburger
+{
+  /*display: none;*/
+  position: absolute;
+  right: 10px;
+  font-size: 24px;
+  padding-top: 15px;
+  color: #1589FF;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.hamburger i
+{
+  color: #FFFFFF;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.hamburger:hover i
+{
+  color: #1589FF;
+}
+
+/*******************
+5. Sidenav
+******************/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menu_copyright
+{
+  padding-top:  15px !important;
+}
+
+/*********************************
+6. Popular
+*********************************/
+.popular
+{
+  width: 100%;
+  background: #FFFFFF;
+}
+.popular_content
+{
+  width: 100%;
+  margin-top: 82px;
+    float: left;
+}
+.popular_item
+{
+  width: 20%;
+  margin-bottom: 26px;
+  position: relative;
+}
+.popular_item:nth-last-child(-n+4)
+{
+  margin-bottom: 0px;
+}
+.popular_item a
+{
+  display: block;
+}
+
+.popular_item img
+{
+  max-width: 100%;
+}
+.popular_item_content
+{
+  position: absolute;
+  left: 28px;
+  bottom: 35px;
+  z-index: 10;  
+ 
+}
+.popular_item_price
+{
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.popular_item_title
+{
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.popular .card-deck
+{
+margin-bottom: 50px;
+}
+
+.popular .card-img-top
+{
+  height: 200px;
+}
+
+/***************
+Booking Form
+***************/
+.booking
+{
+  width: 100%;
+  height: 50vh;
+}
+.booking_background
+{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.booking_form
+{
+  top: 100px;
+}
+/****************
+7. About
+****************/
+/***************
+8.Special
+***************/
+.section_title
+{
+  padding-top: 50px;
+  line-height: 1.1;
+  padding-bottom: 50px;
+}
+
+.section_title h2
+{
+  font-weight: 300;
+  color: #131a2f;
+}
+
+.section_title div
+{
+  font-size: 16px;
+  font-weight: 400;
+  color: #7d8293;
+  text-transform: uppercase;
+  margin-top: 19px;
+}
+
+
+
+/**************
+8.Contact
+***************/
+
+/**************
+Footer
+**************/
+.footer
+{
+  background-color: #101010;
+  margin-top: 10px;
+  padding: 50px 0px;
+  color: #666;
+}
+
+.footer h5
+{
+  padding: 20px 25px 10px 25px;
+}
+
+.footer a
+{
+  color: #666; 
+  text-decoration: none;
+  line-height: 2;
+}
+
+.footer_detail
+{
+  line-height: 2;
+}
+
+.bottom_footer
+{
+  background-color: #000000;
+  height: 50px;
+  color: #282828;
+  text-align: center;
+  padding: 10px 0px;
+}
